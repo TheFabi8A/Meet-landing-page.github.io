@@ -76,19 +76,20 @@ body {
 
 .paragraph-main {
     opacity: 0.5;
+    margin-bottom: 15px;
 }
 
 .container-btn {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
 }
 
 [class^="btn"] {
     height: 50px;
     border-radius: 25px;
     align-self: center;
-    padding: 10px 0;
+    padding: 15px 0;
     font-weight: 700;
     color: var(--white);
     border: none;
@@ -203,10 +204,6 @@ body {
 .title-footer {
     font-size: 2em;
     font-weight: 700;
-}
-
-[class^="paragraph"] {
-    font-weight: 400;
 }
 
 .paragraph-footer {
