@@ -3,19 +3,31 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.container-img-header-desktop {
+    display: none;
+}
+
+:root {
+    --purple: #855fb1;
+    --lightblue: #4d96a9;
+    --white: #fff;
+    --gray: #c9c9c9;
 }
 
 body {
     font-family: "Red Hat Display", sans-serif;
-    margin: 0 auto;
+    font-size: 16px;
 }
 
 .container-absolute {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     min-width: 375px;
     margin: 0 auto;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .logo {
@@ -31,23 +43,174 @@ body {
 }
 
 .container-4img {
-    outline: 1px solid blue;
     min-width: 375px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    box-sizing: border-box;
+    padding: 20px;
+    margin: 50px auto;
 }
 
 .container-4img > img {
     max-width: calc(50% - 10px);
-    box-sizing: border-box;
     border-radius: 10px;
 }
 
-.title {
+.container-main {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: center;
+    gap: 25px;
+    width: 325px;
+    margin: 0 auto;
+}
+
+.title-main {
     text-align: center;
     font-size: 2.5em;
     font-weight: 900;
+    line-height: 1em;
+}
+
+.paragraph-main {
+    opacity: 0.5;
+}
+
+.container-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+[class^="btn"] {
+    height: 50px;
+    border-radius: 25px;
+    align-self: center;
+    padding: 10px 0;
+    font-weight: 700;
+    color: var(--white);
+    border: none;
+    scale: 1.15;
+}
+
+[class^="btn"] > span {
+    opacity: 0.5;
+}
+
+[class$="download"] {
+    background-color: var(--lightblue);
+    padding: 0 35px;
+}
+
+[class$="purple"] {
+    background-color: var(--purple);
+    padding: 0 25px;
+}
+
+.number-section {
+    font-weight: 500;
+    position: relative;
+    margin: 175px auto 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--gray);
+    border-radius: 25px;
+    background-color: var(--white);
+}
+
+.number-section::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    height: 100px;
+    width: 2px;
+    background-color: var(--gray);
+}
+
+.container-aside {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.subtitle-aside {
+    color: var(--lightblue);
+    text-transform: uppercase;
+    font-weight: 700;
+    word-spacing: 4px;
+    letter-spacing: 4px;
+    font-size: 1em;
+}
+
+.title-aside {
+    font-size: 2.25em;
+    font-weight: 900;
+}
+
+.paragraph-aside {
+    opacity: 0.5;
+    font-size: 1.1em;
+}
+
+.container-footer {
+    min-width: 375px;
+}
+
+.container-footer figure {
+    height: 428px;
+    position: relative;
+}
+
+.background-footer {
+    width: 100%;
+    position: relative;
+    z-index: -5;
+    object-fit: fill;
+}
+
+.content-footer {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    color: var(--white);
+    text-align: center;
+    background-color: #4d97a9de;
+}
+
+.content-footer .btn-download {
+    background-color: var(--purple);
+}
+
+.content {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 90px;
+}
+
+.title-footer {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.paragraph-footer {
+    font-size: 1.15em;
+}
+
+.last-section {
+    position: relative;
+    bottom: -25px;
+    z-index: 5;
 }
