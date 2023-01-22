@@ -205,6 +205,10 @@ body {
     font-weight: 700;
 }
 
+[class^="paragraph"] {
+    font-weight: 400;
+}
+
 .paragraph-footer {
     font-size: 1.15em;
 }
