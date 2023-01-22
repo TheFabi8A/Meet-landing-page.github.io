@@ -13,30 +13,41 @@ body {
 .container-absolute {
     display: flex;
     flex-flow: column;
-    width: 375px;
+    min-width: 375px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .logo {
     align-self: center;
-    margin: 50px 0;
+    margin-top: 50px;
 }
 
 .img-header {
     align-self: center;
     width: 100%;
+    margin: 50px 0;
+    scale: 1.1;
 }
 
 .container-4img {
-    width: 100%;
+    outline: 1px solid blue;
+    min-width: 375px;
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    justify-content: center;
     gap: 20px;
     box-sizing: border-box;
 }
 
 .container-4img > img {
-    width: 40%;
-    align-self: flex-start;
+    max-width: calc(50% - 10px);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 900;
 }
