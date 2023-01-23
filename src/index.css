@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-.container-img-header-desktop {
+.main > img {
     display: none;
 }
 
@@ -258,6 +258,10 @@ body {
         width: 625px;
     }
 
+    .content {
+        gap: 40px;
+    }
+
     .title-footer {
         line-height: 1em;
         width: 375px;
@@ -271,12 +275,69 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
-    .container-img-header-desktop {
+    .main > img {
         display: block;
+        align-self: stretch;
+        position: relative;
+    }
+
+    .main {
+        display: flex;
+        margin-top: 75px;
+        gap: 25px;
+    }
+
+    .main [class$="left"] {
+        order: 1;
+        left: -35px;
+        top: -35px;
+    }
+
+    .container-main {
+        order: 2;
+        width: 475px;
+    }
+
+    .main [class$="right"] {
+        order: 3;
+        right: -35px;
+        top: 15px;
+    }
+
+    .title-main {
+        font-size: 4em;
+    }
+
+    .container-btn {
+        flex-direction: row;
+        margin: 0 auto;
+        gap: 35px;
     }
 
     .img-header {
         display: none;
+    }
+
+    .container-4img {
+        width: 90%;
+        gap: 25px;
+        margin-bottom: 20px;
+    }
+
+    .container-4img img {
+        width: calc(25% - 50px);
+    }
+
+    .container-aside {
+        width: 525px;
+    }
+
+    .title-aside {
+        width: 400px;
+    }
+
+    .background-footer-desktop {
+        display: block;
     }
 
     .background-footer-mobile {
@@ -285,5 +346,37 @@ body {
 
     .background-footer-tablet {
         display: none;
+    }
+
+    .content-footer {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content {
+        flex-direction: row;
+        margin: 0 auto;
+        text-align: left;
+        justify-content: space-around;
+    }
+
+    .btn-download {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .container-footer figure {
+        height: 100%;
+    }
+
+    .title-footer {
+        width: 260px;
+    }
+
+    .paragraph-footer {
+        width: 300px;
     }
 }
