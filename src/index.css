@@ -218,7 +218,7 @@ body {
     z-index: 5;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) and (max-width: 1365px) {
     .img-header {
         scale: 1.075;
     }
@@ -274,7 +274,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1366px) {
     .main > img {
         display: block;
         align-self: stretch;
